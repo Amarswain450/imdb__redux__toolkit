@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import "./HomeScreen.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../store/imdbSlice';
@@ -13,8 +13,9 @@ import Loader from '../components/loader/Loader';
 import SearchBar from '../components/searchbar/SearchBar';
 
 const HomeScreen = () => {
-    const { datas: movies, loading } = useSelector((state) => state.imdb);
+    const { datas: movies, loading, error } = useSelector((state) => state.imdb);
     // console.log(movies);
+    //console.log(error);
 
     const dispatch = useDispatch();
 
@@ -28,6 +29,13 @@ const HomeScreen = () => {
                 <Box>
                     <SearchBar />
                 </Box>
+                {
+                    error && (
+                        <Box>
+                            <Typography style={{color: "red", fontWeight: "bold"}}>{error}</Typography>
+                        </Box>
+                    )
+                }
                 {
                     loading ? (
                         <Loader />
@@ -50,7 +58,7 @@ const HomeScreen = () => {
                                             <Card sx={{ maxWidth: 345 }}>
                                                 <CardMedia
                                                     component="img"
-                                                    alt={movie.i.imageUrl}
+                                                    alt="img"
                                                     height="140"
                                                     image={movie.i.imageUrl}
                                                 />

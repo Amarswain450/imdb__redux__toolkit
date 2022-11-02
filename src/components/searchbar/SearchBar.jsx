@@ -17,9 +17,9 @@ const SearchBar = () => {
                 dispatch(fetchData(searchItem));
             }
             if (searchItem === "") dispatch(fetchData("game"));
-        }, 2000);
+        }, 1000);
         return () => clearTimeout(timer);
-    }, [searchItem]);
+    }, [dispatch, searchItem]);
 
     return (
         <>
