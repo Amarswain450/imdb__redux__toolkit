@@ -22,7 +22,7 @@ const SearchBar = () => {
             <Box component="form" noValidate autoComplete="off">
                 <FormControl style={{ width: "40%" }}>
                     <OutlinedInput
-                        placeholder="Please enter text"
+                        placeholder="Search Here"
                         onChange={(e) => setSearchItem(e.target.value)}
                     />
                 </FormControl>
