@@ -11,10 +11,14 @@ const SearchBar = () => {
     const [searchItem, setSearchItem] = useState("");
 
     useEffect(() => {
-        if (searchItem) {
-            dispatch(fetchData(searchItem));
-        }
-        if (searchItem === "") dispatch(fetchData("game"));
+        let timer;
+        timer = setTimeout(() => {
+            if (searchItem) {
+                dispatch(fetchData(searchItem));
+            }
+            if (searchItem === "") dispatch(fetchData("game"));
+        }, 2000);
+        return () => clearTimeout(timer);
     }, [searchItem]);
 
     return (
