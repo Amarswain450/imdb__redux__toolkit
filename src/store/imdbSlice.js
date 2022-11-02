@@ -35,8 +35,8 @@ export default imdbSlice.reducer;
 
 const options = {
 	headers: {
-		'X-RapidAPI-Key': '7bd74ebf01msh52944dea6996d43p196e9ejsnc056422bf23e',
-		'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
+		'X-RapidAPI-Key': process.env.REACT_APP_X_RAPIDAPI_KEY,
+		'X-RapidAPI-Host': process.env.REACT_APP_X_RAPIDAPI_HOST
 	}
 };
 
