@@ -29,13 +29,6 @@ export const imdbSlice = createSlice({
 
 export default imdbSlice.reducer;
 
-// const options = {
-//   headers: {
-//     'X-RapidAPI-Key': 'c2bedd75d9mshed5cc3741fe3106p178fd4jsnb8d6fd4ddc16',
-//     'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
-//   }
-// };
-
 const options = {
   headers: {
     'X-RapidAPI-Key': '7bd74ebf01msh52944dea6996d43p196e9ejsnc056422bf23e',

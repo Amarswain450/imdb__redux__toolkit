@@ -32,7 +32,7 @@ const HomeScreen = () => {
                 {
                     error && (
                         <Box>
-                            <Typography style={{color: "red", fontWeight: "bold"}}>{error}</Typography>
+                            <Typography style={{ color: "red", fontWeight: "bold" }}>{error}</Typography>
                         </Box>
                     )
                 }
@@ -42,16 +42,6 @@ const HomeScreen = () => {
                     ) : (
                         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} style={{ padding: "30px 0" }}>
                             {
-                                // movies.filter((val) => {
-                                //     // console.log(val.l);
-                                //     if (searchItem === "") {
-                                //         return val;
-                                //     } else if (val.l.toLowerCase().includes(searchItem)) {
-                                //         return val;
-                                //     } else if (val.l.toUpperCase().includes(searchItem)) {
-                                //         return val;
-                                //     }
-                                // }).
                                 movies.map((movie) => {
                                     return (
                                         <Grid item xs={2} sm={4} md={4} key={movie.id}>
